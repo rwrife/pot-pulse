@@ -64,16 +64,20 @@ Final BOM source of truth will live in KiCad schematic symbol properties and be 
 
 ## Current status
 - ✅ Repository scaffold and execution backlog created
-- 🚧 Documentation/backlog phase only (no firmware/app/KiCad implementation yet)
+- ✅ MVP architecture, interface ownership, non-goals, and risk baseline documented in [`docs/architecture.md`](docs/architecture.md)
+- 🚧 Hardware, firmware, and app implementation not started
 
 ## Milestones
-1. Requirements + architecture freeze
+1. Architecture and risk baseline
 2. Datasheet-backed component selection
 3. KiCad schematic and ERC
-4. PCB layout and DRC
-5. Firmware bring-up + simulated/bench validation
-6. Companion app MVP + local export
-7. Integration docs + fabrication-ready package
+4. Schematic-source BOM and non-schematic procurement tracking
+5. PCB layout and DRC
+6. Firmware MVP with repeatable build/tests
+7. Companion app MVP with local export
+8. Integration docs and fabrication-ready release package
+
+See [`PLAN.md`](PLAN.md) for the authoritative issue dependency graph and exit gates.
 
 ## Development quickstart (planned)
 ### Firmware

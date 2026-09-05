@@ -1,7 +1,7 @@
 # Pot Pulse — Implementation Plan
 
 ## Scope and architecture
-Pot Pulse is a low-voltage sensing node plus local-first companion app.
+Pot Pulse is a low-voltage sensing node plus local-first companion app. The normative MVP subsystem boundaries, interfaces, safety constraints, non-goals, and risk ownership are defined in [`docs/architecture.md`](docs/architecture.md). Downstream changes that alter those boundaries must update the architecture in the same pull request.
 
 ### Subsystems
 1. **Sensor node (ESP32-C3 firmware)**
@@ -21,15 +21,24 @@ Pot Pulse is a low-voltage sensing node plus local-first companion app.
 - **CSV/JSON exports**: transparent, user-owned data portability.
 
 ## Milestones and dependency order
-1. Finalize measurable requirements and safety envelope.
-2. Select candidate components via manufacturer datasheets and lifecycle checks.
-3. Create KiCad project + full schematic (power/protection/connectors/debug/test points), run ERC.
-4. Export schematic-backed `bom/bom.csv` with manufacturer/MPN/source fields.
-5. Create PCB (if retained), run DRC, and document constraints.
-6. Implement firmware sampling + calibration + local API + persistent settings.
-7. Implement companion app setup/status/history/export flow.
-8. Perform integration bring-up and document expected measurements.
-9. Publish fabrication/release artifacts once design matures.
+
+| Milestone | GitHub issue | Depends on | Exit gate |
+|---|---:|---|---|
+| Architecture and risk baseline | #1 | None | System context, interface ownership, non-goals, risk mitigations, and verification owners are agreed |
+| Datasheet-backed component selection | #2 | #1 | Critical parts have manufacturer/MPN, electrical/package validation, lifecycle/availability snapshot, and KiCad field conventions |
+| Editable schematic and ERC | #3 | #1, #2 | KiCad source captures the architecture interfaces and passes ERC or documents every exception |
+| Schematic-source BOM | #4 | #2, #3 | `bom/bom.csv` is reproducibly exported from populated KiCad properties and non-schematic items are tracked separately |
+| PCB layout and DRC | #5 | #3, #4 | Editable layout implements mechanical/testability constraints and passes DRC or documents every exception |
+| Firmware MVP | #6 | #3, #5 | Pinned build, sampling/calibration/persistence/recovery implementation, `/api/v1` fixtures, and automated tests are reproducible |
+| Companion app MVP | #7 | #1, #6 | Setup, status/history, accessible UX, export/backup/restore/delete flows build and test against the firmware contract |
+| Integration and release package | #8 | #4, #5, #6, #7 | Bring-up/assembly docs and mature fabrication/release artifacts carry an explicit static/simulation/bench/field evidence matrix |
+
+Dependency policy:
+
+- A dependent milestone may be explored early, but it cannot claim acceptance completion until all listed gates have landed.
+- Component and electrical decisions flow from manufacturer datasheets into KiCad properties and then into the exported BOM; the preliminary planning CSV is not a source of truth.
+- Firmware owns physical sensor behavior and the device API; the app consumes the versioned protocol and does not encode board-level assumptions.
+- Issue #8 is the only release/fabrication gate and must not promote placeholders or static checks as physical validation.
 
 ## Testing strategy
 - **Static checks**: lint/format for firmware and app.
@@ -44,10 +53,9 @@ Pot Pulse is a low-voltage sensing node plus local-first companion app.
 - Hardware: KiCad sources, PDF schematic, Gerbers/drills, BOM/CPL when applicable.
 
 ## Risks
-- Soil moisture probe drift/corrosion and calibration instability.
-- Sensor placement variability across different pots and media.
-- Wi‑Fi onboarding friction in home networks.
-- Scope creep toward automation (watering control) beyond MVP safety bounds.
+The authoritative risk register is [`docs/architecture.md`](docs/architecture.md#9-risk-register). It assigns mitigations, evidence types, and verification owners for probe drift/corrosion, analog noise, power integrity, I2C faults, onboarding/recovery, API authorization, flash persistence, stale UI data, export privacy, enclosure bias/moisture exposure, scope creep, and component lifecycle.
+
+Risk status must be updated where the evidence is produced. Static review, automated test/simulation, bench validation, and field observation remain distinct evidence classes.
 
 ## Explicit non-goals
 - Autonomous irrigation or actuator control.
