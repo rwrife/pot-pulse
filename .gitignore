@@ -1,0 +1,32 @@
+# Build artifacts
+build/
+dist/
+coverage/
+
+# Node/Vite
+node_modules/
+.vite/
+
+# Firmware / PlatformIO
+.pio/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local runtime data
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Generated exports/packages
+exports/
+releases/

@@ -1,0 +1,14 @@
+Item,Qty,Function,Candidate_Part_or_Module,Package_or_Module,Manufacturer,MPN,Estimated_Unit_Cost_USD,Source_URL,Planning_Status,Notes
+MCU module,1,Main controller with Wi-Fi and USB,ESP32-C3 development module or equivalent,Module,TBD,TBD,TBD - live sourcing required,TBD,PLANNING_ONLY,Select exact module after interface and footprint tradeoff review
+Ambient sensor,1,Temperature and humidity sensing,SHT3x/HTU2x-class digital sensor,Breakout or IC,TBD,TBD,TBD - live sourcing required,TBD,PLANNING_ONLY,Exact sensor chosen after availability and accuracy comparison
+Light sensor,1,Ambient light measurement,BH1750-class digital light sensor,Breakout or IC,TBD,TBD,TBD - live sourcing required,TBD,PLANNING_ONLY,Must support indoor low-light range
+Moisture channels,4,Per-pot moisture measurement,Capacitive soil moisture probe modules,Probe module,TBD,TBD,TBD - live sourcing required,TBD,PLANNING_ONLY,Prefer corrosion-resistant capacitive probes
+ADC or analog expansion,1,Additional stable analog channels if needed,ADS1115-class ADC or analog multiplexer,IC/breakout,TBD,TBD,TBD - live sourcing required,TBD,PLANNING_ONLY,Finalize after channel and precision testing
+Voltage regulation,1,3.3V regulation from USB input,Low-noise 3.3V regulator,IC,TBD,TBD,TBD - live sourcing required,TBD,PLANNING_ONLY,Exact regulator to be selected from datasheet-backed shortlist
+Protection passives set,1,Input and IO protection as required,ESD/protection plus resistor/capacitor set,Mixed SMD,TBD,TBD,TBD - live sourcing required,TBD,PLANNING_ONLY,Exact values and parts depend on final schematic
+Connectors and headers set,1,Sensor and debug connectivity,JST-XH/PH headers and pin headers,Mixed,TBD,TBD,TBD - live sourcing required,TBD,PLANNING_ONLY,Connector family decided after enclosure routing
+User controls and indicators,1,Local interaction,Pushbutton plus LED indicators,Mixed,TBD,TBD,TBD - live sourcing required,TBD,PLANNING_ONLY,Indicators must not rely on color alone
+USB cable,1,Power and setup connection,USB cable (data-capable),Cable,TBD,TBD,TBD - live sourcing required,TBD,PLANNING_ONLY,Length/type chosen by enclosure placement
+Enclosure,1,Mechanical housing,3D-printed or off-the-shelf enclosure,Mechanical,TBD,TBD,TBD - fabrication quote required,TBD,PLANNING_ONLY,Include venting and sensor lead routing
+Fasteners/standoffs set,1,Assembly hardware,"M2/M3 screws, nuts, standoffs",Mechanical,TBD,TBD,TBD - live sourcing required,TBD,PLANNING_ONLY,Material and length based on final board thickness and enclosure
+Debug/programming adapter,1,Firmware flashing and bring-up,USB-UART/JTAG adapter (if required),Tooling,TBD,TBD,TBD - live sourcing required,TBD,PLANNING_ONLY,May be omitted if chosen MCU module has stable USB flashing path
