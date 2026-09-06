@@ -65,6 +65,7 @@ Final BOM source of truth will live in KiCad schematic symbol properties and be 
 ## Current status
 - ✅ Repository scaffold and execution backlog created
 - ✅ MVP architecture, interface ownership, non-goals, and risk baseline documented in [`docs/architecture.md`](docs/architecture.md)
+- ✅ Datasheet-backed critical component selection documented in [`hardware/component-selection.md`](hardware/component-selection.md)
 - 🚧 Hardware, firmware, and app implementation not started
 
 ## Milestones
