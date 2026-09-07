@@ -51,14 +51,12 @@ Houseplant care is mostly guesswork between watering days. People often overwate
 - Monitoring only; no high-power actuators.
 - Not a life-safety, agricultural compliance, or medical system.
 
-## Planned source tree and artifact policy
-This repository is scaffold-first. Hardware implementation must be delivered as editable KiCad source files (not image-only schematics):
+## Source tree and artifact policy
+Hardware implementation is delivered as editable KiCad source files (not image-only schematics):
 
-- `hardware/kicad/pot-pulse.kicad_pro` (planned)
-- `hardware/kicad/pot-pulse.kicad_sch` (planned)
+- `hardware/kicad/pot-pulse.kicad_pro`
+- `hardware/kicad/pot-pulse.kicad_sch`
 - `hardware/kicad/pot-pulse.kicad_pcb` (planned, if custom PCB is retained)
-
-These files are **not created yet** in this initial scaffold.
 
 Final BOM source of truth will live in KiCad schematic symbol properties and be exported to tracked `bom/bom.csv`.
 
@@ -66,7 +64,8 @@ Final BOM source of truth will live in KiCad schematic symbol properties and be 
 - ✅ Repository scaffold and execution backlog created
 - ✅ MVP architecture, interface ownership, non-goals, and risk baseline documented in [`docs/architecture.md`](docs/architecture.md)
 - ✅ Datasheet-backed critical component selection documented in [`hardware/component-selection.md`](hardware/component-selection.md)
-- 🚧 Hardware, firmware, and app implementation not started
+- ✅ Editable first-pass KiCad schematic and native ERC evidence under [`hardware/kicad/`](hardware/kicad/)
+- 🚧 PCB, firmware, and app implementation not started
 
 ## Milestones
 1. Architecture and risk baseline

@@ -1,0 +1,31 @@
+{
+  "evidence_class": "static_schematic_analysis",
+  "source": "KiCad MCP connections + circuit_patterns on hardware/kicad/pot-pulse.kicad_sch",
+  "connections": {
+    "parser_path": "cli",
+    "incomplete": false,
+    "component_count_excluding_power_flags": 57,
+    "net_count": 27,
+    "component_types": {"C": 13, "D": 1, "F": 1, "J": 6, "L": 1, "R": 12, "TP": 16, "U": 7},
+    "power_nets": {
+      "+3V3": 24,
+      "+5V_PROTECTED": 8,
+      "GND": 60,
+      "VBUS": 6
+    },
+    "potential_issues": []
+  },
+  "identified_patterns": {
+    "rc_low_pass_filters": [["R9", "C10"], ["R10", "C11"], ["R11", "C12"], ["R12", "C13"]],
+    "i2c": {"signals": ["I2C_SCL", "I2C_SDA"], "components": ["R4", "R5", "TP5", "TP6", "U2", "U4", "U5", "U6"]},
+    "usb": {"signals": ["USB_CONN_DM", "USB_CONN_DP", "USB_DM", "USB_DP", "VBUS"], "components": ["F1", "J1", "TP1", "TP7", "TP8", "U2", "U7"]},
+    "microcontroller": {"component": "U2", "family": "ESP32"},
+    "adc": {"component": "U4", "model": "ADS1115", "resolution": "16-bit", "channels": 4, "interface": "I2C"}
+  },
+  "triaged_heuristic_false_positives": [
+    "circuit_patterns classified U1 TPS62162 as an LDO; manufacturer datasheet and explicit SW/L1 topology show it is a synchronous buck",
+    "circuit_patterns classified U6 VEML7700 as a regulator; it is the ambient-light sensor"
+  ],
+  "native_erc_is_authoritative": "reports/erc.rpt records 0 errors and 0 warnings",
+  "limits": "No PCB, simulation, bench, EMC, thermal, environmental, calibration, or field evidence was produced."
+}
