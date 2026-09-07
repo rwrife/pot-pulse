@@ -1,0 +1,30 @@
+# Supplemental schematic analyzer output
+
+Evidence class: static schematic analysis
+Source: KiCad MCP `connections` and `circuit_patterns` operations on `pot-pulse.kicad_sch`
+
+CONNECTIONS
+- parser_path: cli
+- incomplete: false
+- components excluding power flags: 57
+- nets: 27
+- component types: C=13, D=1, F=1, J=6, L=1, R=12, TP=16, U=7
+- power nets: +3V3=24 pins, +5V_PROTECTED=8, GND=60, VBUS=6
+- potential issues: none reported
+
+PATTERNS
+- Four RC low-pass filters: R9/C10, R10/C11, R11/C12, R12/C13
+- I2C: I2C_SCL/I2C_SDA on R4, R5, TP5, TP6, U2, U4, U5, U6
+- USB: USB_CONN_DM/DP, USB_DM/DP and VBUS on F1, J1, TP1, TP7, TP8, U2, U7
+- ESP32 microcontroller: U2
+- ADS1115 16-bit four-channel I2C ADC: U4
+
+TRIAGED HEURISTIC FALSE POSITIVES
+- The pattern detector called U1/TPS62162 an LDO. The manufacturer datasheet and explicit SW/L1 topology establish a synchronous buck.
+- The pattern detector called U6/VEML7700 a regulator. U6 is the ambient-light sensor.
+
+AUTHORITATIVE ERC
+`reports/erc.rpt`: 0 errors, 0 warnings.
+
+LIMITS
+No PCB, simulation, bench, EMC, thermal, environmental, calibration, or field evidence was produced.

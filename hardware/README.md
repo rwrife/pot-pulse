@@ -52,10 +52,12 @@ Expected evidence artifacts (later milestones):
 - Gerbers/drill files
 - BOM export from schematic properties (`bom/bom.csv`)
 
-Current state: critical parts selected; no KiCad project committed yet.
+Current state: critical parts selected and the issue #3 first-pass KiCad schematic is available under [`kicad/`](kicad/). Native ERC reports 0 errors and 0 warnings; PCB/layout and physical validation remain later milestones.
 
 Validate the selection handoff from the repository root:
 
 ```sh
 python3 scripts/validate_component_selection.py
 ```
+
+Reproduce and validate the schematic with the commands in [`kicad/README.md`](kicad/README.md).
