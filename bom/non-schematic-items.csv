@@ -1,0 +1,6 @@
+Item,Quantity,Manufacturer,MPN,Supplier,Source URL,Estimated Unit Cost USD,Status,Dependency,Notes
+Capacitive moisture probe with PH2.0-3P cable,4,DFRobot,SEN0193,DFRobot,https://www.dfrobot.com/product-1385.html,TBD - live quote required,Selected - quote required,,Power at 3.3 V; bench-characterize output range and wet/dry repeatability; do not claim soil-water-content accuracy.
+USB-C data-capable cable,1,TBD,TBD,Unassigned,TBD,TBD - select and quote,Pending selection,Issue #8 bring-up package,Must carry USB 2.0 data as well as power; record exact manufacturer and MPN before ordering.
+Vented enclosure,1,TBD,TBD,Unassigned,TBD,TBD - select and quote,Blocked on mechanics,Issue #5 PCB layout,Provide SHT40 ventilation and VEML7700 optical aperture; keep metal and cable bundles outside the ESP32 antenna keepout.
+Fastener and standoff set,1,TBD,TBD,Unassigned,TBD,TBD - select and quote,Blocked on mechanics,Issue #5 PCB layout,Select after board thickness mounting-hole pattern and enclosure stack-up are fixed.
+USB-to-UART debug adapter,1,TBD,TBD,Unassigned,TBD,TBD - select and quote,Conditional tooling,Issue #6 firmware bring-up,Native USB is primary; purchase only if UART fallback is required and verify 3.3 V logic compatibility.
