@@ -14,6 +14,33 @@ from pathlib import Path
 
 RES_DS = "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_16.pdf"
 CAP_DS = "https://www.murata.com/en-global/products/capacitor/mlcc/overview/lineup"
+PRICE_SNAPSHOT_DATE = "2026-09-08"
+
+# Exact source records queried by MPN on PRICE_SNAPSHOT_DATE. USBLC6-2SC6
+# and TPD4E05U06DQAR intentionally retain the manufacturer-validated LCSC
+# records from the 2026-09-05 component-selection snapshot; newer same-MPN
+# search hits did not expose manufacturer identity and are not substitutions.
+SOURCING: dict[str, tuple[str, str, str, str, str]] = {
+    # MPN: (supplier, supplier PN, source URL, estimated unit cost USD, snapshot date)
+    "ADS1115IDGSR": ("LCSC", "C37593", "https://www.lcsc.com/product-detail/C37593.html", "1.5342", PRICE_SNAPSHOT_DATE),
+    "ESD5Z5.0T1G": ("LCSC", "C82044", "https://www.lcsc.com/product-detail/C82044.html", "0.0365", PRICE_SNAPSHOT_DATE),
+    "ESP32-C3-MINI-1-H4X": ("LCSC", "C41349510", "https://www.lcsc.com/product-detail/C41349510.html", "3.0795", PRICE_SNAPSHOT_DATE),
+    "GRM188R71H104KA93D": ("LCSC", "C77055", "https://www.lcsc.com/product-detail/C77055.html", "0.0199", PRICE_SNAPSHOT_DATE),
+    "GRM31CR61A106KA01L": ("LCSC", "C97949", "https://www.lcsc.com/product-detail/C97949.html", "0.3352", PRICE_SNAPSHOT_DATE),
+    "MF-MSMF050-2": ("LCSC", "C17313", "https://www.lcsc.com/product-detail/C17313.html", "0.0690", PRICE_SNAPSHOT_DATE),
+    "RC0603FR-07100KL": ("LCSC", "C14675", "https://www.lcsc.com/product-detail/C14675.html", "0.0022", PRICE_SNAPSHOT_DATE),
+    "RC0603FR-0710KL": ("LCSC", "C98220", "https://www.lcsc.com/product-detail/C98220.html", "0.0023", PRICE_SNAPSHOT_DATE),
+    "RC0603FR-071KL": ("LCSC", "C22548", "https://www.lcsc.com/product-detail/C22548.html", "0.0021", PRICE_SNAPSHOT_DATE),
+    "RC0603FR-074K7L": ("LCSC", "C99782", "https://www.lcsc.com/product-detail/C99782.html", "0.0023", PRICE_SNAPSHOT_DATE),
+    "RC0603FR-075K1L": ("LCSC", "C105580", "https://www.lcsc.com/product-detail/C105580.html", "0.0020", PRICE_SNAPSHOT_DATE),
+    "S3B-PH-K-S(LF)(SN)": ("LCSC", "C157929", "https://www.lcsc.com/product-detail/C157929.html", "0.0497", PRICE_SNAPSHOT_DATE),
+    "SHT40-AD1B-R2": ("LCSC", "C2909890", "https://www.lcsc.com/product-detail/C2909890.html", "2.0288", PRICE_SNAPSHOT_DATE),
+    "TPD4E05U06DQAR": ("LCSC", "C138714", "https://www.lcsc.com/product-detail/C138714.html", "0.0819", "2026-09-05"),
+    "TPS62162DSGR": ("LCSC", "C40256", "https://www.lcsc.com/product-detail/C40256.html", "0.9697", PRICE_SNAPSHOT_DATE),
+    "USB4105-GF-A": ("LCSC", "C3020560", "https://www.lcsc.com/product-detail/C3020560.html", "1.0319", PRICE_SNAPSHOT_DATE),
+    "USBLC6-2SC6": ("LCSC", "C7519", "https://www.lcsc.com/product-detail/C7519.html", "0.1639", "2026-09-05"),
+    "VEML7700-TR": ("LCSC", "C504893", "https://www.lcsc.com/product-detail/C504893.html", "0.7256", PRICE_SNAPSHOT_DATE),
+}
 
 
 def find_symbol_dir(explicit: str | None) -> Path:
@@ -197,9 +224,20 @@ def main() -> int:
             manufacturer: str, mpn: str, datasheet: str, notes: str, *,
             supplier: str = "", supplier_pn: str = "", in_bom: bool = True):
         c = sch.components.add(lib_id, ref, value, position=pos, footprint=footprint)
+        source_url = datasheet
+        estimated_unit_cost = "TBD - live quote required"
+        price_snapshot = PRICE_SNAPSHOT_DATE
+        if sourcing := SOURCING.get(mpn):
+            supplier, supplier_pn, source_url, estimated_unit_cost, price_snapshot = sourcing
+        elif in_bom:
+            supplier = supplier or "Unassigned"
         for key, val in {
             "Manufacturer": manufacturer, "MPN": mpn, "Datasheet": datasheet,
-            "Supplier": supplier, "Supplier PN": supplier_pn, "BOM Comments": notes,
+            "Supplier": supplier, "Supplier PN": supplier_pn,
+            "Source URL": source_url,
+            "Estimated Unit Cost USD": estimated_unit_cost,
+            "Price Snapshot Date": price_snapshot,
+            "BOM Comments": notes,
         }.items():
             c.set_property(key, val)
         c.in_bom = in_bom
