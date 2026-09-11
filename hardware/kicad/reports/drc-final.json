@@ -1,0 +1,146 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-11T13:31:32+0000",
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "9.0.9",
+    "schematic_parity": [],
+    "source": "pot-pulse.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 3 [/+3V3] of U5 on F.Cu",
+                    "pos": {
+                        "x": 54.9,
+                        "y": 30.4
+                    },
+                    "uuid": "edaef574-469f-4a12-8155-729af50faa2f"
+                },
+                {
+                    "description": "Track [/+3V3] on F.Cu, length 1.7729 mm",
+                    "pos": {
+                        "x": 53.318,
+                        "y": 28.9148
+                    },
+                    "uuid": "c7b68702-268b-40c5-bf29-860d3f3db8f5"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [/I2C_SCL] of U5 on F.Cu",
+                    "pos": {
+                        "x": 53.5,
+                        "y": 30.4
+                    },
+                    "uuid": "8fd4553e-b10f-4fb9-be18-8504e503ccfb"
+                },
+                {
+                    "description": "Track [/I2C_SCL] on F.Cu, length 3.2073 mm",
+                    "pos": {
+                        "x": 54.539,
+                        "y": 28.1967
+                    },
+                    "uuid": "879721d4-6159-45f9-b7f9-5d0e344151ea"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [/I2C_SDA] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 52.9655,
+                        "y": 24.9427
+                    },
+                    "uuid": "df0c347d-c3b5-4c43-a6f3-786c301d9d32"
+                },
+                {
+                    "description": "Pad 1 [/I2C_SDA] of U5 on F.Cu",
+                    "pos": {
+                        "x": 53.5,
+                        "y": 29.6
+                    },
+                    "uuid": "81417dc6-a203-49f8-a83b-3b388b1e997e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad A7 [/USB_CONN_DM] of J1 on F.Cu",
+                    "pos": {
+                        "x": 1.32,
+                        "y": 24.75
+                    },
+                    "uuid": "783f1c42-8809-43cc-9e92-32fcc22c31bc"
+                },
+                {
+                    "description": "Track [/USB_CONN_DM] on F.Cu, length 0.8770 mm",
+                    "pos": {
+                        "x": 2.197,
+                        "y": 25.75
+                    },
+                    "uuid": "ef2139e3-5df1-4b06-af05-932b40a960bb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/VBUS] on B.Cu, length 4.8000 mm",
+                    "pos": {
+                        "x": 1.32,
+                        "y": 22.6
+                    },
+                    "uuid": "ac47e55a-39e6-4dcd-a642-f6f360c1d086"
+                },
+                {
+                    "description": "Track [/VBUS] on B.Cu, length 29.5580 mm",
+                    "pos": {
+                        "x": 10.1375,
+                        "y": 36.8395
+                    },
+                    "uuid": "15e0b293-affb-4037-9161-8fffced9ecf5"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [/I2C_SDA] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 52.9655,
+                        "y": 24.9427
+                    },
+                    "uuid": "df0c347d-c3b5-4c43-a6f3-786c301d9d32"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        }
+    ]
+}

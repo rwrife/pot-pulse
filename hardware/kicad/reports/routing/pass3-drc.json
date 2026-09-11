@@ -1,0 +1,560 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-10T13:33:49+0000",
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "9.0.9",
+    "schematic_parity": [],
+    "source": "pot-pulse.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_CONN_DP] on F.Cu, length 0.6761 mm",
+                    "pos": {
+                        "x": 1.9961,
+                        "y": 24.25
+                    },
+                    "uuid": "4ea24c6d-e513-49d1-af95-35818c5a90f9"
+                },
+                {
+                    "description": "Pad A6 [/USB_CONN_DP] of J1 on F.Cu",
+                    "pos": {
+                        "x": 1.32,
+                        "y": 25.25
+                    },
+                    "uuid": "bd823ed5-64c3-4d20-ae37-e785e1c30a0e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad A9 [/VBUS] of J1 on F.Cu",
+                    "pos": {
+                        "x": 1.32,
+                        "y": 22.6
+                    },
+                    "uuid": "e0e15ad8-2ec6-42d5-b9d6-d63dbe7969bb"
+                },
+                {
+                    "description": "Track [/VBUS] on F.Cu, length 0.7000 mm",
+                    "pos": {
+                        "x": 1.32,
+                        "y": 27.4
+                    },
+                    "uuid": "7d85a280-485f-4e9b-b07c-f7d9079e9455"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/VBUS] on F.Cu, length 0.7000 mm",
+                    "pos": {
+                        "x": 10.1375,
+                        "y": 36.8832
+                    },
+                    "uuid": "8ecd2fa9-cc93-49c7-958b-a34adce04631"
+                },
+                {
+                    "description": "Track [/VBUS] on In1.Cu, length 4.0748 mm",
+                    "pos": {
+                        "x": 13.0188,
+                        "y": 39.7645
+                    },
+                    "uuid": "3e0a2972-860e-4ab9-a961-b8b5f3b2bd1b"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets /+3V3 and /ADC_ALERT_N)",
+            "items": [
+                {
+                    "description": "Via [/+3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 54.525,
+                        "y": 22.0
+                    },
+                    "uuid": "104ed765-000b-41dd-948b-cbdf00b42725"
+                },
+                {
+                    "description": "Track [/ADC_ALERT_N] on In2.Cu, length 14.8097 mm",
+                    "pos": {
+                        "x": 39.9813,
+                        "y": 21.88
+                    },
+                    "uuid": "f6db6124-a30a-4df1-bec8-b72b218aad6d"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /U0RXD and /I2C_SCL)",
+            "items": [
+                {
+                    "description": "Track [/U0RXD] on In1.Cu, length 4.0864 mm",
+                    "pos": {
+                        "x": 56.2027,
+                        "y": 29.1057
+                    },
+                    "uuid": "06781d9d-782b-4148-ae6e-3912747b53ba"
+                },
+                {
+                    "description": "Via [/I2C_SCL] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 54.539,
+                        "y": 27.095
+                    },
+                    "uuid": "35cb6638-7670-430f-9cc8-1ff7b4f0fa3e"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1296 mm)",
+            "items": [
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 51.9,
+                        "y": 25.6
+                    },
+                    "uuid": "3e91e236-547b-4e8b-828d-03bab112430d"
+                },
+                {
+                    "description": "Track [/I2C_SDA] on F.Cu, length 3.5261 mm",
+                    "pos": {
+                        "x": 52.6183,
+                        "y": 25.5694
+                    },
+                    "uuid": "8c8d9812-2aad-4218-8cc8-dead52895239"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /+3V3 and /ADC_ALERT_N)",
+            "items": [
+                {
+                    "description": "Via [/+3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 54.525,
+                        "y": 22.0
+                    },
+                    "uuid": "104ed765-000b-41dd-948b-cbdf00b42725"
+                },
+                {
+                    "description": "Track [/ADC_ALERT_N] on In2.Cu, length 1.0772 mm",
+                    "pos": {
+                        "x": 54.791,
+                        "y": 21.88
+                    },
+                    "uuid": "f5055f49-0bd6-4748-9261-c9c06b214aa3"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1421 mm)",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.2605 mm",
+                    "pos": {
+                        "x": 11.1266,
+                        "y": 36.5411
+                    },
+                    "uuid": "3c8fca3f-d756-4e23-bf7c-d6a3a1f8d003"
+                },
+                {
+                    "description": "Track [/VBUS] on F.Cu, length 0.7000 mm",
+                    "pos": {
+                        "x": 10.1375,
+                        "y": 36.8832
+                    },
+                    "uuid": "8ecd2fa9-cc93-49c7-958b-a34adce04631"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /I2C_SCL and /+3V3)",
+            "items": [
+                {
+                    "description": "Track [/I2C_SCL] on In2.Cu, length 0.8840 mm",
+                    "pos": {
+                        "x": 45.1014,
+                        "y": 19.1236
+                    },
+                    "uuid": "3d8cad5e-ee60-4410-a597-c08b1187ee8c"
+                },
+                {
+                    "description": "Via [/+3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 45.4682,
+                        "y": 19.7568
+                    },
+                    "uuid": "9dc0ffa5-467f-4f00-aea0-de9470dc6c4f"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets /EN and /GND)",
+            "items": [
+                {
+                    "description": "Track [/EN] on In1.Cu, length 16.0860 mm",
+                    "pos": {
+                        "x": 57.2873,
+                        "y": 39.2495
+                    },
+                    "uuid": "2c65d44c-34a2-4880-a3cc-c8f859f26513"
+                },
+                {
+                    "description": "Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 57.079,
+                        "y": 27.095
+                    },
+                    "uuid": "3db8c5db-5d44-49e0-812e-0a6446c28784"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1852 mm)",
+            "items": [
+                {
+                    "description": "Track [/U0RXD] on In2.Cu, length 21.9065 mm",
+                    "pos": {
+                        "x": 52.7951,
+                        "y": 23.6613
+                    },
+                    "uuid": "5f3ca772-6deb-4c84-8040-471be61ca765"
+                },
+                {
+                    "description": "Via [/I2C_SDA] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 50.125,
+                        "y": 23.0761
+                    },
+                    "uuid": "bc00200e-a718-4edd-9459-2962324c3761"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /+3V3 and /I2C_SCL)",
+            "items": [
+                {
+                    "description": "Via [/+3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 45.4682,
+                        "y": 19.7568
+                    },
+                    "uuid": "9dc0ffa5-467f-4f00-aea0-de9470dc6c4f"
+                },
+                {
+                    "description": "Track [/I2C_SCL] on In2.Cu, length 6.9360 mm",
+                    "pos": {
+                        "x": 45.7265,
+                        "y": 19.7487
+                    },
+                    "uuid": "d1e13b8c-6884-476b-afc9-2ebd472966eb"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1920 mm)",
+            "items": [
+                {
+                    "description": "Track [/VBUS] on F.Cu, length 0.7000 mm",
+                    "pos": {
+                        "x": 1.32,
+                        "y": 27.4
+                    },
+                    "uuid": "7d85a280-485f-4e9b-b07c-f7d9079e9455"
+                },
+                {
+                    "description": "NPTH pad of J1",
+                    "pos": {
+                        "x": 2.395,
+                        "y": 27.89
+                    },
+                    "uuid": "12936086-47e6-4d3c-8ae0-b1e236bc7479"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1420 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of J1",
+                    "pos": {
+                        "x": 2.395,
+                        "y": 27.89
+                    },
+                    "uuid": "12936086-47e6-4d3c-8ae0-b1e236bc7479"
+                },
+                {
+                    "description": "Via [/VBUS] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 2.02,
+                        "y": 27.4
+                    },
+                    "uuid": "42afbb81-e205-4fc5-8ad1-b7eae5d82427"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/VBUS] on B.Cu, length 13.0227 mm",
+                    "pos": {
+                        "x": 10.1375,
+                        "y": 37.5832
+                    },
+                    "uuid": "8212f81f-77a0-4f92-9f69-1288a23329e8"
+                },
+                {
+                    "description": "NPTH pad of J1",
+                    "pos": {
+                        "x": 2.395,
+                        "y": 27.89
+                    },
+                    "uuid": "12936086-47e6-4d3c-8ae0-b1e236bc7479"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1420 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of J1",
+                    "pos": {
+                        "x": 2.395,
+                        "y": 27.89
+                    },
+                    "uuid": "12936086-47e6-4d3c-8ae0-b1e236bc7479"
+                },
+                {
+                    "description": "Via [/VBUS] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 2.02,
+                        "y": 27.4
+                    },
+                    "uuid": "42afbb81-e205-4fc5-8ad1-b7eae5d82427"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items not allowed (keepout area)",
+            "items": [
+                {
+                    "description": "Via [/+3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 51.2,
+                        "y": 26.4
+                    },
+                    "uuid": "618fa639-5a74-4e26-9c73-ac22417db4c9"
+                }
+            ],
+            "severity": "error",
+            "type": "items_not_allowed"
+        },
+        {
+            "description": "Items not allowed (keepout area)",
+            "items": [
+                {
+                    "description": "Track [/I2C_SCL] on F.Cu, length 0.7000 mm",
+                    "pos": {
+                        "x": 49.8,
+                        "y": 26.4
+                    },
+                    "uuid": "40008619-f731-4871-a301-11e2a614efde"
+                }
+            ],
+            "severity": "error",
+            "type": "items_not_allowed"
+        },
+        {
+            "description": "Items not allowed (keepout area)",
+            "items": [
+                {
+                    "description": "Via [/I2C_SDA] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 49.8,
+                        "y": 25.6
+                    },
+                    "uuid": "7f296920-ea35-4275-9b20-1a6a2125382e"
+                }
+            ],
+            "severity": "error",
+            "type": "items_not_allowed"
+        },
+        {
+            "description": "Drilled holes co-located",
+            "items": [
+                {
+                    "description": "Via [/+3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 47.2645,
+                        "y": 22.501
+                    },
+                    "uuid": "02f4c2ba-d7e6-4dda-8c49-af94f9e826a9"
+                },
+                {
+                    "description": "Via [/+3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 47.2645,
+                        "y": 22.501
+                    },
+                    "uuid": "a782fc39-b4c0-4392-9133-a2c843112908"
+                }
+            ],
+            "severity": "warning",
+            "type": "holes_co_located"
+        },
+        {
+            "description": "Drilled holes co-located",
+            "items": [
+                {
+                    "description": "Via [/+3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 51.495,
+                        "y": 22.9778
+                    },
+                    "uuid": "186fe35f-44e7-4c30-9e3b-0f69d0938fe7"
+                },
+                {
+                    "description": "Via [/+3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 51.495,
+                        "y": 22.9778
+                    },
+                    "uuid": "a0ef0780-ca70-457e-8ede-58cf5e9b9ea6"
+                }
+            ],
+            "severity": "warning",
+            "type": "holes_co_located"
+        },
+        {
+            "description": "Drilled holes co-located",
+            "items": [
+                {
+                    "description": "Via [/+3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 53.4659,
+                        "y": 18.4006
+                    },
+                    "uuid": "979b94d2-d7bb-4099-b5b1-f66cc93cfd7e"
+                },
+                {
+                    "description": "Via [/+3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 53.4659,
+                        "y": 18.4006
+                    },
+                    "uuid": "c96a05bf-1d1e-4f36-8ce6-765cd4657829"
+                }
+            ],
+            "severity": "warning",
+            "type": "holes_co_located"
+        },
+        {
+            "description": "Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.1420 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of J1",
+                    "pos": {
+                        "x": 2.395,
+                        "y": 27.89
+                    },
+                    "uuid": "12936086-47e6-4d3c-8ae0-b1e236bc7479"
+                },
+                {
+                    "description": "Via [/VBUS] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 2.02,
+                        "y": 27.4
+                    },
+                    "uuid": "42afbb81-e205-4fc5-8ad1-b7eae5d82427"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.1420 mm)",
+            "items": [
+                {
+                    "description": "NPTH pad of J1",
+                    "pos": {
+                        "x": 2.395,
+                        "y": 27.89
+                    },
+                    "uuid": "12936086-47e6-4d3c-8ae0-b1e236bc7479"
+                },
+                {
+                    "description": "Via [/VBUS] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 2.02,
+                        "y": 27.4
+                    },
+                    "uuid": "42afbb81-e205-4fc5-8ad1-b7eae5d82427"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/VBUS] on F.Cu, length 0.7000 mm",
+                    "pos": {
+                        "x": 10.1375,
+                        "y": 36.8832
+                    },
+                    "uuid": "8ecd2fa9-cc93-49c7-958b-a34adce04631"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        }
+    ]
+}

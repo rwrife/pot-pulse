@@ -13,4 +13,5 @@
   (lib (name "Resistor_SMD")(type "KiCad")(uri "${KICAD9_FOOTPRINT_DIR}/Resistor_SMD.pretty")(options "")(descr ""))
   (lib (name "Sensor_Humidity")(type "KiCad")(uri "${KICAD9_FOOTPRINT_DIR}/Sensor_Humidity.pretty")(options "")(descr ""))
   (lib (name "TestPoint")(type "KiCad")(uri "${KICAD9_FOOTPRINT_DIR}/TestPoint.pretty")(options "")(descr ""))
+  (lib (name "pot-pulse")(type "KiCad")(uri "${KIPRJMOD}/lib/pot-pulse.pretty")(options "")(descr "Project land patterns (datasheet-verified; see generate_footprints.py)"))
 )

@@ -33,3 +33,6 @@ Thumbs.db
 # Generated exports/packages
 exports/
 releases/
+
+# KiCad project-local UI state
+*.kicad_prl
