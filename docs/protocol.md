@@ -64,6 +64,40 @@ Each resource below requires a valid pairing credential and server-side schema/r
 
 The concrete pairing resource, headers, status codes, size limits, pagination shape, and confirmation-value format must be frozen with shared fixtures in issue #6 before issue #7 claims integration completion.
 
+### Frozen mechanics (issue #6 implementation)
+
+- **Pairing flow (nonce-based, out-of-band confirmation):**
+  1. `POST /api/v1/pair/request` — unauthenticated, returns `202` with
+     `{"pair_id":"<8 hex>","nonce":"<8 hex>","confirm_over":"usb-serial"}`.
+     Only one pending request at a time (`409` while active). Contains no
+     user data or stable identifiers.
+  2. A human runs `pair confirm <pair_id>` on the device's USB serial
+     console; the device mints a 32-hex-char token printed **only** on the
+     serial console.
+  3. The app sends `X-PotPulse-Token: <token>` on protected resources.
+     Invalid/absent token → `401 {"error":"unauthorized"}`; device state is
+     never changed on failed auth (fail closed).
+- **Pre-pairing status:** `GET /api/v1/status` is readable unauthenticated
+  but omits `device_id` (no stable tracking identifier) and never returns
+  retained history, calibration, names, or credentials.
+- **Zone identity:** persistent ids `z1`..`z4`; `zone_names` in
+  `POST /api/v1/config` are display metadata only. History responses echo
+  `zone_id`.
+- **Headers/auth:** `X-PotPulse-Token`. Status codes: `200/202` success,
+  `400` validation, `401` auth, `409` conflict (pairing), `422` incompatible
+  backup version, `428` confirmation required (history delete).
+- **Limits:** request bodies ≤ 8 KiB; `limit` 1..500 (default 100);
+  zone name ≤ 32 chars; `sample_interval_ms` 30000..900000.
+- **Confirmation words:** history delete requires query `confirm=confirm`;
+  reset requires body `{"level":"full-firmware","confirm":"confirm"}`.
+  `full-firmware` erases pairing/config/calibration/history and RETAINS
+  Wi-Fi credentials (documented reset semantics).
+- **Error shape:** `{"error":"<code>","message":"<safe text>"}`; messages
+  never include secrets, tokens, or config values.
+- **Timestamps:** ISO-8601 UTC second precision when synchronized, else
+  `"timestamp":null` + `time_quality:"relative"`. `monotonic_ms` is always
+  present for ordering.
+
 ## Status payload sketch
 
 Illuminance, temperature, and humidity are **device-level** observations because the MVP has one light sensor and one ambient sensor per node. Only moisture is per-zone.
