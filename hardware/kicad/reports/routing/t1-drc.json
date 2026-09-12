@@ -1,0 +1,625 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-11T12:56:36+0000",
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "9.0.9",
+    "schematic_parity": [],
+    "source": "pot-pulse.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/+3V3] on F.Cu, length 2.7460 mm",
+                    "pos": {
+                        "x": 45.725,
+                        "y": 20.0583
+                    },
+                    "uuid": "224e8dd2-bc44-4505-a536-9eca51221f62"
+                },
+                {
+                    "description": "Track [/+3V3] on F.Cu, length 1.1616 mm",
+                    "pos": {
+                        "x": 48.475,
+                        "y": 22.0
+                    },
+                    "uuid": "216d029b-9a65-4138-8561-80ee511e437b"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 3 [/+3V3] of U5 on F.Cu",
+                    "pos": {
+                        "x": 54.9,
+                        "y": 30.4
+                    },
+                    "uuid": "89ed2e0a-2eb0-4d19-9454-acacba19463b"
+                },
+                {
+                    "description": "Track [/+3V3] on F.Cu, length 1.7729 mm",
+                    "pos": {
+                        "x": 53.318,
+                        "y": 28.9148
+                    },
+                    "uuid": "f61f4910-4e75-4d91-b7e3-cf0cf2077467"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Blind/Buried Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 26.775,
+                        "y": 34.4814
+                    },
+                    "uuid": "2a9e0b46-67fc-4738-a92a-d17fe016c803"
+                },
+                {
+                    "description": "Pad 2 [/GND] of C6 on F.Cu",
+                    "pos": {
+                        "x": 26.775,
+                        "y": 33.5
+                    },
+                    "uuid": "dcf6fe82-4836-4edc-8ba6-bff38d2e99c7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 1.9750 mm",
+                    "pos": {
+                        "x": 36.975,
+                        "y": 25.275
+                    },
+                    "uuid": "66dd6d09-5b3f-474f-947f-a5fc3efb83a0"
+                },
+                {
+                    "description": "Track [/GND] on F.Cu, length 0.2910 mm",
+                    "pos": {
+                        "x": 38.0017,
+                        "y": 25.275
+                    },
+                    "uuid": "d7c9dda4-32f7-474d-8bd4-f60306389b8d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 0.2804 mm",
+                    "pos": {
+                        "x": 38.3983,
+                        "y": 19.3
+                    },
+                    "uuid": "08df3b16-ff0d-4c4f-984f-969d98fea36c"
+                },
+                {
+                    "description": "Pad 14 [/GND] of U2 on F.Cu",
+                    "pos": {
+                        "x": 38.2,
+                        "y": 18.4
+                    },
+                    "uuid": "2d75bf54-80f8-4e9b-989d-cbf170049e32"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 4 [/GND] of U5 on F.Cu",
+                    "pos": {
+                        "x": 54.9,
+                        "y": 29.6
+                    },
+                    "uuid": "321ddda4-c302-45f5-a8c8-0bd78f86b483"
+                },
+                {
+                    "description": "Blind/Buried Via [/GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 57.079,
+                        "y": 28.418
+                    },
+                    "uuid": "17fa4b3c-dfef-4e65-93f5-0478aafa715a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [/I2C_SCL] of U5 on F.Cu",
+                    "pos": {
+                        "x": 53.5,
+                        "y": 30.4
+                    },
+                    "uuid": "6389662c-7193-4b89-afb0-1b74c7765765"
+                },
+                {
+                    "description": "Track [/I2C_SCL] on F.Cu, length 1.1017 mm",
+                    "pos": {
+                        "x": 54.539,
+                        "y": 27.095
+                    },
+                    "uuid": "b767c647-9e09-44b8-92e3-bb1c700ba1dd"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/I2C_SDA] on F.Cu, length 2.3425 mm",
+                    "pos": {
+                        "x": 35.0,
+                        "y": 19.1017
+                    },
+                    "uuid": "6ff20986-c5a7-4feb-bdec-f77c84fb4e53"
+                },
+                {
+                    "description": "Track [/I2C_SDA] on B.Cu, length 1.1104 mm",
+                    "pos": {
+                        "x": 27.433,
+                        "y": 23.3954
+                    },
+                    "uuid": "61100b87-68da-4b06-80f7-c5e23407800b"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [/I2C_SDA] of U5 on F.Cu",
+                    "pos": {
+                        "x": 53.5,
+                        "y": 29.6
+                    },
+                    "uuid": "3c92d177-fc32-46dc-a9f3-a44667ca454b"
+                },
+                {
+                    "description": "Track [/I2C_SDA] on F.Cu, length 4.2252 mm",
+                    "pos": {
+                        "x": 56.4907,
+                        "y": 24.9427
+                    },
+                    "uuid": "efc4d509-db66-4a4d-b6f6-a792af27ac3d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/MOISTURE_AIN1] on B.Cu, length 5.5065 mm",
+                    "pos": {
+                        "x": 50.9625,
+                        "y": 13.1875
+                    },
+                    "uuid": "11072ed8-d457-4cc8-b389-bf3b97da74ac"
+                },
+                {
+                    "description": "Pad 5 [/MOISTURE_AIN1] of U4 on F.Cu",
+                    "pos": {
+                        "x": 50.3,
+                        "y": 19.0
+                    },
+                    "uuid": "6cf11edf-dee6-4d35-972d-36c7726f6f74"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/MOISTURE_AIN2] on B.Cu, length 0.8156 mm",
+                    "pos": {
+                        "x": 53.3,
+                        "y": 48.075
+                    },
+                    "uuid": "c5a8479b-7a46-4354-9841-64616d9797c8"
+                },
+                {
+                    "description": "Track [/MOISTURE_AIN2] on F.Cu, length 0.4151 mm",
+                    "pos": {
+                        "x": 16.281,
+                        "y": 48.075
+                    },
+                    "uuid": "0266dafc-a251-4b13-ac51-198ef3f496ea"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad A7 [/USB_CONN_DM] of J1 on F.Cu",
+                    "pos": {
+                        "x": 1.32,
+                        "y": 24.75
+                    },
+                    "uuid": "9d6b9c3c-5890-4d8f-a80e-8f22a182f163"
+                },
+                {
+                    "description": "Track [/USB_CONN_DM] on F.Cu, length 0.8770 mm",
+                    "pos": {
+                        "x": 2.197,
+                        "y": 25.75
+                    },
+                    "uuid": "0bf52f16-2b2e-4111-ba9b-6f61393bde5d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_DP] on F.Cu, length 9.7564 mm",
+                    "pos": {
+                        "x": 25.8266,
+                        "y": 20.3795
+                    },
+                    "uuid": "4495c01e-9878-466f-9133-b90c02f02e68"
+                },
+                {
+                    "description": "Track [/USB_DP] on F.Cu, length 3.2734 mm",
+                    "pos": {
+                        "x": 25.8266,
+                        "y": 20.9
+                    },
+                    "uuid": "d7ddf185-e705-4bce-8f71-d1253b33c0d7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_DP] on B.Cu, length 1.5049 mm",
+                    "pos": {
+                        "x": 24.7625,
+                        "y": 27.9525
+                    },
+                    "uuid": "ddfaad5b-fed7-453a-9193-73d90c7a3cac"
+                },
+                {
+                    "description": "Track [/USB_DP] on F.Cu, length 0.6481 mm",
+                    "pos": {
+                        "x": 25.8266,
+                        "y": 21.5481
+                    },
+                    "uuid": "fa3f7426-9f55-42a9-ae8c-d7d1277ac288"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad A9 [/VBUS] of J1 on F.Cu",
+                    "pos": {
+                        "x": 1.32,
+                        "y": 22.6
+                    },
+                    "uuid": "8545e7ff-bd1e-4ed1-a6f3-46fa648f912a"
+                },
+                {
+                    "description": "Pad A4 [/VBUS] of J1 on F.Cu",
+                    "pos": {
+                        "x": 1.32,
+                        "y": 27.4
+                    },
+                    "uuid": "0fec21b3-aa15-42e3-b776-bd75c558960e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad A4 [/VBUS] of J1 on F.Cu",
+                    "pos": {
+                        "x": 1.32,
+                        "y": 27.4
+                    },
+                    "uuid": "0fec21b3-aa15-42e3-b776-bd75c558960e"
+                },
+                {
+                    "description": "Track [/VBUS] on B.Cu, length 4.1366 mm",
+                    "pos": {
+                        "x": 7.2125,
+                        "y": 39.7645
+                    },
+                    "uuid": "e943690d-b712-4584-955d-de29a386e34d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Segment of U6 on F.Silkscreen",
+                    "pos": {
+                        "x": 53.044,
+                        "y": 27.695
+                    },
+                    "uuid": "16b7a6de-339f-4c30-96c2-0a68e29c76ca"
+                },
+                {
+                    "description": "Reference field of U5",
+                    "pos": {
+                        "x": 54.2,
+                        "y": 28.3
+                    },
+                    "uuid": "92fd15f6-e601-4262-b450-e596038dcc21"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "Circle of U6 on F.Silkscreen",
+                    "pos": {
+                        "x": 53.8,
+                        "y": 28.2
+                    },
+                    "uuid": "4aa8b441-ba10-4af3-a766-601576d5a3a1"
+                },
+                {
+                    "description": "Reference field of U5",
+                    "pos": {
+                        "x": 54.2,
+                        "y": 28.3
+                    },
+                    "uuid": "92fd15f6-e601-4262-b450-e596038dcc21"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of U5",
+                    "pos": {
+                        "x": 54.2,
+                        "y": 28.3
+                    },
+                    "uuid": "92fd15f6-e601-4262-b450-e596038dcc21"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/+3V3] on F.Cu, length 2.7460 mm",
+                    "pos": {
+                        "x": 45.725,
+                        "y": 20.0583
+                    },
+                    "uuid": "224e8dd2-bc44-4505-a536-9eca51221f62"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/+3V3] on F.Cu, length 9.3564 mm",
+                    "pos": {
+                        "x": 65.5375,
+                        "y": 35.9875
+                    },
+                    "uuid": "b2ada810-46f2-4846-ae64-63a99a244912"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/GND] on F.Cu, length 0.2804 mm",
+                    "pos": {
+                        "x": 38.3983,
+                        "y": 19.3
+                    },
+                    "uuid": "08df3b16-ff0d-4c4f-984f-969d98fea36c"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/I2C_SDA] on B.Cu, length 1.1104 mm",
+                    "pos": {
+                        "x": 27.433,
+                        "y": 23.3954
+                    },
+                    "uuid": "61100b87-68da-4b06-80f7-c5e23407800b"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/I2C_SDA] on B.Cu, length 1.9752 mm",
+                    "pos": {
+                        "x": 39.9654,
+                        "y": 21.9987
+                    },
+                    "uuid": "b0a969d5-26fb-4057-8f1e-068f591168c3"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Blind/Buried Via [/MOISTURE_AIN1] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 49.9821,
+                        "y": 19.6744
+                    },
+                    "uuid": "143d1e8c-4bdb-44a2-b993-7bba4127ee87"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/MOISTURE_AIN1] on B.Cu, length 5.5065 mm",
+                    "pos": {
+                        "x": 50.9625,
+                        "y": 13.1875
+                    },
+                    "uuid": "11072ed8-d457-4cc8-b389-bf3b97da74ac"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/MOISTURE_AIN2] on F.Cu, length 0.4151 mm",
+                    "pos": {
+                        "x": 16.281,
+                        "y": 48.075
+                    },
+                    "uuid": "0266dafc-a251-4b13-ac51-198ef3f496ea"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Blind/Buried Via [/MOISTURE_AIN2] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 53.3,
+                        "y": 48.075
+                    },
+                    "uuid": "cf4dafd2-b0f5-4a0f-818c-c5029874fe62"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/USB_DP] on F.Cu, length 9.7564 mm",
+                    "pos": {
+                        "x": 25.8266,
+                        "y": 20.3795
+                    },
+                    "uuid": "4495c01e-9878-466f-9133-b90c02f02e68"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Blind/Buried Via [/USB_DP] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 25.8266,
+                        "y": 21.5481
+                    },
+                    "uuid": "66d8ce44-9225-4357-bf84-9cb6028da7ab"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/USB_DP] on B.Cu, length 1.5049 mm",
+                    "pos": {
+                        "x": 24.7625,
+                        "y": 27.9525
+                    },
+                    "uuid": "ddfaad5b-fed7-453a-9193-73d90c7a3cac"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        }
+    ]
+}
