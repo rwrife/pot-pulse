@@ -1,0 +1,23 @@
+{
+  "name": "pot-pulse-companion",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local-first Pot Pulse companion app (setup, status, trends, export, backup/restore) — consumes docs/protocol.md against firmware issue #6.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "typescript": "5.6.3",
+    "vite": "5.4.11"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "jsdom": "25.0.1",
+    "vitest": "2.1.8"
+  }
+}
