@@ -1,0 +1,30 @@
+Drill report for pot-pulse.kicad_pcb
+Created on 2026-09-14T13:40:08+0000
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  In1.Cu                    in1
+    L3 :  In2.Cu                    in2
+    L4 :  B.Cu                      back
+
+
+Drill file 'pot-pulse.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.250mm  0.0098"  (2 holes)
+    T2  0.300mm  0.0118"  (95 holes)
+    T3  0.600mm  0.0236"  (4 holes)  (with 4 slots)
+    T4  0.750mm  0.0295"  (12 holes)
+    T5  1.000mm  0.0394"  (6 holes)
+
+    Total plated holes count 119
+
+
+Not plated through holes are merged with plated holes
+    unplated through holes:
+    =============================================================
+    T6  0.650mm  0.0256"  (2 holes)
+    T7  3.200mm  0.1260"  (3 holes)
+
+    Total unplated holes count 5

@@ -56,7 +56,7 @@ Hardware implementation is delivered as editable KiCad source files (not image-o
 
 - `hardware/kicad/pot-pulse.kicad_pro`
 - `hardware/kicad/pot-pulse.kicad_sch`
-- `hardware/kicad/pot-pulse.kicad_pcb` (planned, if custom PCB is retained)
+- `hardware/kicad/pot-pulse.kicad_pcb`
 
 Final BOM source of truth will live in KiCad schematic symbol properties and be exported to tracked `bom/bom.csv`.
 
@@ -64,8 +64,11 @@ Final BOM source of truth will live in KiCad schematic symbol properties and be 
 - ✅ Repository scaffold and execution backlog created
 - ✅ MVP architecture, interface ownership, non-goals, and risk baseline documented in [`docs/architecture.md`](docs/architecture.md)
 - ✅ Datasheet-backed critical component selection documented in [`hardware/component-selection.md`](hardware/component-selection.md)
-- ✅ Editable first-pass KiCad schematic and native ERC evidence under [`hardware/kicad/`](hardware/kicad/)
-- 🚧 PCB, firmware, and app implementation not started
+- ✅ Editable KiCad project, DRC/ERC evidence, and pad-net cross-check tooling under [`hardware/kicad/`](hardware/kicad/)
+- ✅ Firmware MVP with repeatable native tests and ESP32-C3 builds under [`firmware/`](firmware/)
+- ✅ Companion app MVP with repeatable typecheck/test/build under [`app/`](app/)
+- ✅ Integration bring-up + assembly docs, evidence matrix, and fabrication preview bundle under [`docs/`](docs/)
+- 🚧 Production-ready fabrication release still blocked by open PCB unconnected items (see `docs/evidence/2026-09-14/drc.json`)
 
 ## Milestones
 1. Architecture and risk baseline
@@ -79,7 +82,15 @@ Final BOM source of truth will live in KiCad schematic symbol properties and be 
 
 See [`PLAN.md`](PLAN.md) for the authoritative issue dependency graph and exit gates.
 
-## Development quickstart (planned)
+## Integration handoff docs
+
+- Bring-up procedure: [`docs/bring-up.md`](docs/bring-up.md)
+- Assembly sequence and checks: [`docs/assembly.md`](docs/assembly.md)
+- Evidence classification: [`docs/evidence-matrix.md`](docs/evidence-matrix.md)
+- Fabrication/release workflow: [`docs/release-artifacts.md`](docs/release-artifacts.md)
+- Explicit media placeholders: [`docs/media-placeholders.md`](docs/media-placeholders.md)
+
+## Development quickstart
 ### Firmware
 - Toolchain: PlatformIO (ESP-IDF framework)
 - Target: ESP32-C3 dev module + custom carrier pin map
@@ -91,5 +102,3 @@ See [`PLAN.md`](PLAN.md) for the authoritative issue dependency graph and exit g
 ### Hardware
 - KiCad 9 project under `hardware/kicad/`
 - BOM exported to `bom/bom.csv`
-
-(Implementation workspace will be added by backlog issues.)
